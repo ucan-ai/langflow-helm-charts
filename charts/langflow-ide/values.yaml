@@ -72,8 +72,8 @@ langflow:
       - --backend-only
     resources:
       requests:
-        cpu: 0.5
-        memory: 1Gi
+        cpu: 4
+        memory: 8Gi
       # limits:
       #   cpu: 0.5
       #   memory: 1Gi
@@ -237,4 +237,9 @@ secretProvider:
   enabled: false
 
 postgresql:
-  enabled: false
+  enabled: true
+  auth:
+    username: "langflow9090"
+    password: "langflow-postgres9191"
+    database: "langflow-db"
+
